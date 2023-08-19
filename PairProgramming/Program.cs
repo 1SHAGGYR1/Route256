@@ -26,27 +26,29 @@ for (var i = 0; i < testsCount; i++)
         var deviation = 0;
         int? loverRank = rank;
         int? higherRank = rank;
-        var lowerDevId = 0;
-        var higherDevId = 0;
+        var lowerRankDevExist = ranksDistribution[rank - 1].TryPeek(out var lowerDevId);
+        var higherRankDevExists = ranksDistribution[rank - 1].TryPeek(out var higherDevId);
 
-        while ((!loverRank.HasValue || !ranksDistribution[loverRank.Value - 1].TryPeek(out lowerDevId)) 
-               && (!higherRank.HasValue || !ranksDistribution[higherRank.Value - 1].TryPeek(out higherDevId)))
+        while (!(lowerRankDevExist || higherRankDevExists))
         {
+            
             deviation++;
             loverRank = rank - deviation > 0 ? rank - deviation : null;
             higherRank = rank + deviation <= 100 ? rank + deviation : null;
             lowerDevId = 0;
             higherDevId = 0;
+            lowerRankDevExist = loverRank.HasValue && ranksDistribution[loverRank.Value - 1].TryPeek(out lowerDevId);
+            higherRankDevExists = higherRank.HasValue && ranksDistribution[higherRank.Value - 1].TryPeek(out higherDevId);
         }
 
-        if (lowerDevId == 0)
+        if (!lowerRankDevExist)
         {
            Console.WriteLine($"{currentDevNumber++} {ranksDistribution[higherRank!.Value - 1].Dequeue()}");
            developersRanks[higherDevId - 1] = 0;
            continue;
         }
 
-        if (higherDevId == 0)
+        if (!higherRankDevExists)
         {
             Console.WriteLine($"{currentDevNumber++} {ranksDistribution[loverRank!.Value - 1].Dequeue()}");
             developersRanks[lowerDevId - 1] = 0;
