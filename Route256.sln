@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummToPay", "SummToPay\Summ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PairProgramming", "PairProgramming\PairProgramming.csproj", "{DE8B9E8F-9AAC-40C0-A744-5090A194D5CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectronicTable", "ElectronicTable\ElectronicTable.csproj", "{69152C05-C3F1-4CAB-8581-C08D4023412B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{DE8B9E8F-9AAC-40C0-A744-5090A194D5CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE8B9E8F-9AAC-40C0-A744-5090A194D5CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE8B9E8F-9AAC-40C0-A744-5090A194D5CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69152C05-C3F1-4CAB-8581-C08D4023412B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69152C05-C3F1-4CAB-8581-C08D4023412B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69152C05-C3F1-4CAB-8581-C08D4023412B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69152C05-C3F1-4CAB-8581-C08D4023412B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
