@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeSegments", "TimeSegment
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PossibleFriends", "PossibleFriends\PossibleFriends.csproj", "{FD0A889D-E69D-4545-86E4-B32C082DD2FF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapValidation", "MapValidation\MapValidation.csproj", "{6B55B236-3D47-447E-9393-31CF7025F102}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{FD0A889D-E69D-4545-86E4-B32C082DD2FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD0A889D-E69D-4545-86E4-B32C082DD2FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD0A889D-E69D-4545-86E4-B32C082DD2FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B55B236-3D47-447E-9393-31CF7025F102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B55B236-3D47-447E-9393-31CF7025F102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B55B236-3D47-447E-9393-31CF7025F102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B55B236-3D47-447E-9393-31CF7025F102}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
