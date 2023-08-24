@@ -3,8 +3,8 @@ var n = nm[0];
 var m = nm[1];
 
 var energyConsumption = Console.ReadLine().Split(' ').Select(uint.Parse).OrderBy(t => t).ToArray();
+var previousTasksStartUpdate = new int[n];
 var busySeconds = new int[n];
-var previousTaskStart = 0;
 ulong totalConsumption = 0;
 for (var i = 0; i < m; i++)
 {
@@ -17,22 +17,24 @@ for (var i = 0; i < m; i++)
     {
         if (busySeconds[j] > 0)
         {
-            busySeconds[j] -= Math.Max(t - previousTaskStart, 0) ;
+            busySeconds[j] -= Math.Max(t - previousTasksStartUpdate[j], 0);
+            previousTasksStartUpdate[j] = t;
         }
 
-        if (firstNonNegativeIndex == -1 && busySeconds[j] <= 0)
+        if (busySeconds[j] <= 0)
         {
             firstNonNegativeIndex = j;
+            break;
         }
     }
 
-    previousTaskStart = t;
     if (firstNonNegativeIndex == -1)
     {
         continue;
     }
 
     busySeconds[firstNonNegativeIndex] = l;
+    previousTasksStartUpdate[firstNonNegativeIndex] = t;
     totalConsumption += (ulong) l * energyConsumption[firstNonNegativeIndex];
 }
 
